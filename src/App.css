@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body{
+  color:#c4cfde;
+  background-color: #212428;
+  position: relative;
+}
+
+.neuro-shadow{
+  border-radius: 11px black solid;
+background-color: #202327;
+box-shadow:  29px 29px 48px #131416,
+             -29px -29px 48px #292c32;
+}
+
+.btn{
+  border-radius: 8px;
+background: #212428;
+box-shadow:  12px 12px 24px #141517,
+             -12px -12px 24px #292b31;
+}
+
+.scroll-hidden::-webkit-scrollbar{
+  display: none;
+}
