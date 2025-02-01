@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Main from './components/Main'
 import GlobeDemo from './components/GlobeDemo'
 import { LampDemo } from './components/Lamp'
+import VisaType from './components/VisaType'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,8 +20,11 @@ function App() {
       <Main/>
       <hr className='w-[80%] m-auto text-black h-[10px]'/>
     </div>
-    <div className='relative'>
+    <div className='relative '>
       <LampDemo/>
+    </div>
+    <div className=''>
+      <VisaType/>
     </div>
 
     

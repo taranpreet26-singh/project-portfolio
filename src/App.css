@@ -23,3 +23,18 @@ box-shadow:  12px 12px 24px #141517,
 .scroll-hidden::-webkit-scrollbar{
   display: none;
 }
+
+
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll{
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
