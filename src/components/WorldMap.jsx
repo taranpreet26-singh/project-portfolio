@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { WorldMap } from "./UI/world-map";
 
 export function WorldMapDemo() {
-    const flagUrls = {
-        Canada: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
-        USA: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
-        Australia: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
-        UK: "https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
-      };
-      
+  const flagUrls = {
+    Canada: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+    USA: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+    Australia: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
+    UK: "https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png",
+    India: "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg", // India flag
+  };
 
   return (
-    <div className="py-40 dark:bg-[#202327] bg-white w-full">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className="py-40 dark:bg-[#202327] relative -top-30 bg-white w-full">
+      <div className="max-w-7xl mx-auto text-center ">
         <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
           Your Gateway to Global Opportunities: Expert{" "}
           <span className="text-neutral-400">
@@ -41,23 +41,32 @@ export function WorldMapDemo() {
       </div>
       <WorldMap
         dots={[
+          // New connections from India only
           {
-            start: { lat: 56.1304, lng: -106.3468 },
-            end: { lat: 37.0902, lng: -95.7129 },
-          }, // Canada to USA
+            start: { lat: 20.5937, lng: 78.9629 },  // India
+            end: { lat: 56.1304, lng: -106.3468 }, // Canada
+          },
           {
-            start: { lat: 51.5074, lng: -0.1278 },
-            end: { lat: -25.2744, lng: 133.7751 },
-          }, // UK to Australia
+            start: { lat: 20.5937, lng: 78.9629 },  // India
+            end: { lat: 51.5074, lng: -0.1278 },   // UK
+          },
+          {
+            start: { lat: 20.5937, lng: 78.9629 },  // India
+            end: { lat: -25.2744, lng: 133.7751 }, // Australia
+          },
+          {
+            start: { lat: 20.5937, lng: 78.9629 },  // India
+            end: { lat: 37.0902, lng: -95.7129 },  // USA
+          },
         ]}
         labels={[
           { lat: 56.1304, lng: -106.3468, name: "Canada", flag: flagUrls.Canada },
           { lat: 37.0902, lng: -95.7129, name: "USA", flag: flagUrls.USA },
           { lat: -25.2744, lng: 133.7751, name: "Australia", flag: flagUrls.Australia },
           { lat: 51.5074, lng: -0.1278, name: "UK", flag: flagUrls.UK },
+          { lat: 20.5937, lng: 78.9629, name: "India", flag: flagUrls.India },
         ]}
       />
     </div>
   );
 }
-

@@ -29,7 +29,7 @@ export function LampDemo() {
           ease: "easeInOut"
         }}
       className="relative top-10 flex overflow-hidden">
-  <ul className="flex gap-14 h-14 w-max animate-scroll sm:text-2xl  md:text-3xl lg:text-4xl mx-auto">
+  <ul className="flex gap-14 h-14 w-max animate-scroll text-2xl  sm:text-2xl  md:text-3xl lg:text-4xl mx-auto">
     {Array(2)
       .fill([
         "VFS Global",

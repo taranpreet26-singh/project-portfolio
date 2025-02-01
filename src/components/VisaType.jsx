@@ -3,7 +3,7 @@ import { WorldMapDemo } from './WorldMap'
 
 const VisaType = () => {
   return (
-    <div className=''>
+    <div className='relative'>
        <WorldMapDemo/>
     </div>
   )
